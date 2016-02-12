@@ -1,0 +1,258 @@
+/*
+ * Globals
+ */
+
+body {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #555;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  margin-top: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  color: #333;
+}
+
+
+/*
+ * Override Bootstrap's default container.
+ */
+
+
+@media (min-width: 1200px) {
+  .container {
+    width: 970px;
+  }
+}
+
+
+/*
+ * Masthead for nav
+ */
+
+.blog-masthead {
+  background-color: #f34c8c/*428bca*/;
+  -webkit-box-shadow: inset 0 -2px 5px rgba(0,0,0,.1);
+          box-shadow: inset 0 -2px 5px rgba(0,0,0,.1);
+}
+
+.blog-masthead>.container {height: 60px; }
+
+/* Nav links */
+
+.blog-nav-item {
+  position: relative;
+  display: inline-block;
+  padding: /*10*/20px;
+  font-weight: 500;
+  color: #cdddeb;
+}
+.blog-nav-item:hover,
+.blog-nav-item:focus,
+.blog-nav-item:visited,
+{
+  color: #fff;
+  text-decoration: none;
+  outline: none;
+}
+
+/* Active state gets a caret at the bottom */
+.blog-nav .active {
+  color: #fff;
+}
+.blog-nav .active:after {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 0;
+  margin-left: -5px;
+  vertical-align: middle;
+  content: " ";
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid;
+  border-left: 5px solid transparent;
+}
+
+
+/*
+ * Blog name and description
+ */
+
+.blog-header {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.blog-title {
+  margin-top: 30px;
+  margin-bottom: 0;
+  font-size: 60px;
+  font-weight: normal;
+}
+.blog-description {
+  font-size: 20px;
+  color: #999;
+}
+
+
+/*
+ * Main column and sidebar layout
+ */
+
+.blog-main {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+/* Sidebar modules for boxing content */
+.sidebar-module {
+  padding: 15px;
+  margin: 0 -15px 15px;
+}
+.sidebar-module-inset {
+  padding: 15px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+}
+.sidebar-module-inset p:last-child,
+.sidebar-module-inset ul:last-child,
+.sidebar-module-inset ol:last-child {
+  margin-bottom: 0;
+}
+
+.panel-danger {
+    border-color: #67C9E0;
+}
+.panel-danger>.panel-heading {
+  /*border-bottom: 1px;*/
+    font-size:18px;
+    color: #fff;
+    background-color: #67C9E0;
+  }
+.panel > ul {
+
+   padding-top: 10px;
+   margin:auto;
+   margin-bottom: 10px;
+
+}
+.panel > ul > li {
+   list-style: none; /* Убираем маркеры списка */
+   padding-left: 0;
+   margin-bottom: 0px;
+
+}
+
+
+/* Pagination */
+.pager {
+  margin-bottom: 60px;
+  text-align: left;
+}
+.pager > li > a {
+  width: 140px;
+  padding: 10px 20px;
+  text-align: center;
+  border-radius: 30px;
+}
+
+
+/*
+ * Blog posts
+ */
+
+.blog-post {
+  margin-bottom: 60px;
+}
+.blog-post-title-home a{
+  margin-bottom: 5px;
+  color:#00AEF1;
+  font-size: 25px;
+  outline: none;
+  text-decoration:underline;
+}
+.blog-post-title-home a:hover{ color: #F02472; }
+
+.blog-post-meta {
+  margin-bottom: 20px;
+  color: #999;
+  font-size: 14px;
+
+}
+.blog-post-meta a{
+  margin-bottom: 20px;
+  color: #00AEF1;
+  outline: none;
+  text-decoration:underline;
+
+}
+.blog-post-meta-bottom a:hover{
+  margin-bottom: 10px;
+  color: #F02472;
+}
+
+/*
+ * Footer
+ */
+
+.blog-footer {
+  padding: 40px 0;
+  color: #999;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-top: 1px solid #e5e5e5;
+}
+.blog-footer p:last-child {
+  margin-bottom: 0;
+}
+
+/*Test*/
+.widget-title {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:22px;
+	font-weight: normal;
+  color: #333;
+	margin-top: 0;
+}
+.textwidget {
+  margin:15px;
+}
+
+
+/*breadcrumbs Dimox*/
+.sep {font-size: 12px; color:inherit;}
+.breadcrumb {font-size: 13px; margin-left: 0px}
+
+.breadcrumb a:visited
+ {
+color:inherit;
+}
+.breadcrumb a:hover
+ {
+color:#EF2373;
+}
+
+.breadcrumb a:link{
+   color: #00AEEF;
+  }
+
+.breadcrumb>.active {
+    color: #717171;
+}
+/*For Read More Link*/
+a.btn-info{
+    color: #fff;
+    background-color: #00AEF1;
+    border-color: #46b8da;
+    text-decoration: none;
+    outline: 0;
+  }
+.btn-info:hover{ background-color: #F02472; border-color:#FEF7FA; }
+
+.img-responsive {padding-top: 10px; padding-bottom: 5px;}
