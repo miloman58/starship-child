@@ -11,7 +11,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php the_title( '<h1 class="blog-post-title">', '</h1>' );
+		<?php the_title( '<h1 class="h1">', '</h1>' );
 			/*if ( is_single() ) {
 				the_title( '<h1 class="entry-title">', '</h1>' );
 			} else {
@@ -20,9 +20,13 @@
 			}*/
 
 		if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php starship_posted_on(); ?>
-		</div><!-- .entry-meta -->
+
+		<p class="blog-post-meta blog-post-meta-bottom"><span class="glyphicon glyphicon-time" aria-hidden="true"></span>  <?php the_time('j F Y') ?>&nbsp;&nbsp; &nbsp;<span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>&nbsp;&nbsp;<span><?php
+	  if(function_exists('get_post_views')) {
+	          echo get_post_total_views();
+	  }
+	   ?></span></p>
+
 		<?php
 		endif; ?>
 	</header><!-- .entry-header -->

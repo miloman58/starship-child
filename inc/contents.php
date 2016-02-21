@@ -51,9 +51,9 @@ function make_contents($content){
 	$out = '';
 	if($left_adw_contents != "" and $right_adw_contents != "" and $_mc_contain['contents']){
 		$out = '<!--noindex--><div class="table-of-content"><div class="table-of-content__title">Содержание</div>';
-		$out .= "\n<ul id='с_menu' class='contents'>\n". $contents ."</ul>\n</div><!--/noindex-->". $_content1;	
+		$out .= "\n<ul id='с_menu' class='contents'>\n". $contents ."</ul>\n</div><!--/noindex-->". $_content1;
 	}
-	elseif($left_adw_contents != "" and $_mc_contain['contents']){	
+	elseif($left_adw_contents != "" and $_mc_contain['contents']){
 		$out = '<div class="contents-block"><div class="left-adw-contents-block">'.$left_adw_contents.'</div>';
 		$out .= '<!--noindex--><div class="table-of-content content-right"><div class="table-of-content__title">Содержание</div>';
 		$out .= "\n<ul id='с_menu' class='contents'>\n". $contents ."</ul>\n</div><!--/noindex--></div><!--.contents-block-->". $_content1;
@@ -62,9 +62,10 @@ function make_contents($content){
 		$out .= "\n<ul id='с_menu' class='contents'>\n". $contents ."</ul>\n</div><!--/noindex-->";
 		$out .= '<div class="right-adw-contents-block">'.$right_adw_contents.'</div></div><!--.contents-block-->'. $_content1;
 	}
-	elseif($_mc_contain['contents']){
-		$out = '<!--noindex--><div class="table-of-content"><div class="table-of-content__title">Содержание</div>';
-		$out .= "\n<ul id='с_menu' class='contents'>\n". $contents ."</ul>\n</div><!--/noindex-->". $_content1;	
+	elseif($_mc_contain['contents']){/*Нужное условие, html  обёртка*/
+		$out = '<!--noindex-->
+	<table class="__responsive"><tr><td><div class="table-of-content__title">Содержание</div>';
+		$out .= "\n<ul id='с_menu'>\n". $contents ."</ul>\n</td></tr></table><!--/noindex-->". $_content1;
 	}
 
 	if($auto_insert_contents == 1 and is_single() and $_mc_contain['all'] >= $min_amount_title_contents){
@@ -112,14 +113,14 @@ function _make_contents($match){
 			$close = "\t</ul>\n$li";
 			// убираем одну открытую
 			--$_mc_contain['open'];
-		} 
+		}
 	}
 	// закрываем если надо
 	if( $_mc_contain['n'] == $_mc_contain['all'] && $_mc_contain['open'] ){
 		$close = "\t</ul>\n";
 	}
 
-	$_mc_contain['contents'][] = "$element $close"; 
+	$_mc_contain['contents'][] = "$element $close";
 
 	$out = $_mc_contain['n'] == 1 ? '' : "";
 	$out .= "<$match[2] id=\"$anchor\">$match[1]</$match[2]>";
@@ -136,7 +137,7 @@ function catch_that_image() {
 	if(!empty($first_img)) return $first_img;
 }
 
-//Выводить содержание автоматически после первой картинки ($auto_insert_contents = 1), автоматически в начало поста ($auto_insert_contents = 2) или не выводить автоматически ($auto_insert_contents = 3). 
+//Выводить содержание автоматически после первой картинки ($auto_insert_contents = 1), автоматически в начало поста ($auto_insert_contents = 2) или не выводить автоматически ($auto_insert_contents = 3).
 //Если автоматический вывод содержания выключен — нужно использовать шорткод [contents].
 $auto_insert_contents = 2;
 

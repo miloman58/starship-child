@@ -176,7 +176,7 @@ require get_template_directory() . '/inc/jetpack.php';
 /**
  * Содержание для больших постов.
  */
-require get_template_directory() . '/inc/contents.php';
+//require get_template_directory() . '/inc/contents.php';
 
 /**
  * Dimox breadcrumbs
@@ -194,29 +194,11 @@ require get_template_directory() . '/tgm/example-starship.php';
 //require get_template_directory() . '/inc/Walker-Quickstart-Menu.php';
 
 /**
- * add automatic class in image for wordpress post
+ * add automatic class in image for wordpress post (img responsive bootstrap css) Add-Img-Responsive-Css-Class.php
  */
-function add_responsive_class($content){
-
-        $content = mb_convert_encoding($content, 'HTML-ENTITIES', "UTF-8");
-        $document = new DOMDocument();
-        libxml_use_internal_errors(true);
-        $document->loadHTML(utf8_decode($content));
-
-        $imgs = $document->getElementsByTagName('img');
-        foreach ($imgs as $img) {
-           $img->setAttribute('class','img-responsive');
-        }
-
-        $html = $document->saveHTML();
-        return $html;
-}
-add_filter ('the_content', 'add_responsive_class');
+ require get_template_directory() . '/inc/Add-Img-Responsive-Css-Class.php';
 
  /**
-  * Modify The Read More Link Text
+  * Modify The Read More Link Text  Modify-Read-More.php
   */
-add_filter( 'the_content_more_link', 'modify_read_more_link' );
- function modify_read_more_link() {
- return '<a class="more-link btn btn-info" href="' . get_permalink() . '">Читать далее...</a>';
- }
+ require get_template_directory() . '/inc/Modify-Read-More.php';

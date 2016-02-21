@@ -17,8 +17,8 @@ function dimox_breadcrumbs() {
   $text['page'] = 'Страница %s'; // текст 'Страница N'
   $text['cpage'] = 'Страница комментариев %s'; // текст 'Страница комментариев N'
 
-  $wrap_before = '<ol class="breadcrumb">'; // открывающий тег обертки
-  $wrap_after = '</ol><!-- .breadcrumbs -->'; // закрывающий тег обертки
+  $wrap_before = '<ul class="breadcrumb">'; // открывающий тег обертки
+  $wrap_after = '</ul><!-- .breadcrumbs -->'; // закрывающий тег обертки
   $sep = '/'; // разделитель между "крошками"
   $sep_before = '<span class="sep">'; // тег перед разделителем
   $sep_after = '</span>'; // тег после разделителя

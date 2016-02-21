@@ -15,10 +15,10 @@
 get_header(); ?>
 
 <div class="col-sm-8 blog-main">
-	<div class="blog-post">
+	<div class="blog-post" style = "margin-top:20px;">
 				   <?php
 					 /*
-            * Для каждой рубрки нужно прописать свой ID, в зависимости от движка они могут отличаться. 
+            * Для каждой рубрки нужно прописать свой ID, в зависимости от движка они могут отличаться.
 					 */
 					 //my array of category IDs
 					 //$categories =  array(1,4,5,3);
@@ -37,19 +37,13 @@ get_header(); ?>
 	 	 while($catquery->have_posts()) : $catquery->the_post();
 	 					 ?>
 
-	 <div class="panel panel-default">
-	<div class="panel-heading">
+
 	            <h2 class="blog-post-title-home"><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h2>
-							</div>
-      <div class="panel-body">
 
-	<p class="blog-post-meta"><span class="glyphicon glyphicon-time" aria-hidden="true"></span> <?php the_time('j F Y'); ?></p>
-							<p> <?php the_content(); ?></p>
+	<p class="blog-post-meta blog-post-meta-bottom"><span class="glyphicon glyphicon-time" aria-hidden="true"></span> <?php the_time('j F Y'); ?>&nbsp;&nbsp;&nbsp;<?php echo "Рубрика: "; 	the_category (' '); //Пустые кавычки убирают теги <ul>  ?></p>
+						<div class="entry-category"><?php the_content(); ?></div>
 
-							<span class="blog-post-meta blog-post-meta-bottom"><?php echo "Рубрика: "; 	the_category (' '); //Пустые кавычки убирают теги <ul>  ?></span>
-							</div>
-		</div>
-					 <?php endwhile; ?>
+						<?php endwhile; ?>
 
 
 					 <?php
@@ -58,18 +52,11 @@ get_header(); ?>
 		 	 	 while($catquery2->have_posts()) : $catquery2->the_post();
 		 	 					 ?>
 
-		 	 <div class="panel panel-default">
-		 	<div class="panel-heading">
 		 	            <h2 class="blog-post-title-home"><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h2>
-		 							</div>
-		       <div class="panel-body">
 
-		 	<p class="blog-post-meta"><span class="glyphicon glyphicon-time" aria-hidden="true"></span> <?php the_time('j F Y'); ?></p>
-		 							<p> <?php the_content(); ?></p>
+		     	<p class="blog-post-meta blog-post-meta-bottom"><span class="glyphicon glyphicon-time" aria-hidden="true"></span> <?php the_time('j F Y'); ?>&nbsp;&nbsp;&nbsp;<?php echo "Рубрика: "; 	the_category (' '); //Пустые кавычки убирают теги <ul>  ?></p>
+		 							<div class="entry-category"> <?php the_content(); ?></div>
 
-		 							<span class="blog-post-meta blog-post-meta-bottom"><?php echo "Рубрика: "; 	the_category (' '); //Пустые кавычки убирают теги <ul>  ?></span>
-		 							</div>
-		 		</div>
 		 					 <?php endwhile; ?>
 
 
@@ -79,18 +66,11 @@ get_header(); ?>
 							 while($catquery3->have_posts()) : $catquery3->the_post();
 							 			?>
 
-							 <div class="panel panel-default">
-							 <div class="panel-heading">
 							 			 <h2 class="blog-post-title-home"><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h2>
-							 			 </div>
-							 <div class="panel-body">
 
-							 <p class="blog-post-meta"><span class="glyphicon glyphicon-time" aria-hidden="true"></span> <?php the_time('j F Y'); ?></p>
-							 			 <p> <?php the_content(); ?></p>
+									 <p class="blog-post-meta blog-post-meta-bottom"><span class="glyphicon glyphicon-time" aria-hidden="true"></span> <?php the_time('j F Y'); ?>&nbsp;&nbsp;&nbsp;<?php echo "Рубрика: "; 	the_category (' '); //Пустые кавычки убирают теги <ul>  ?></p>
+							 			 	<div class="entry-category"> <?php the_content(); ?></div>
 
-							 			 <span class="blog-post-meta blog-post-meta-bottom"><?php echo "Рубрика: "; 	the_category (' '); //Пустые кавычки убирают теги <ul>  ?></span>
-							 			 </div>
-							 </div>
 							 		<?php endwhile; ?>
 
 
@@ -101,19 +81,12 @@ get_header(); ?>
 																 while($catquery4->have_posts()) : $catquery4->the_post();
 																 			?>
 
-																 <div class="panel panel-default">
-																 <div class="panel-heading">
-																 			 <h2 class="blog-post-title-home"><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h2>
-																 			 </div>
-																 <div class="panel-body">
+												 			 <h2 class="blog-post-title-home"><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h2>
 
-																 <p class="blog-post-meta"><span class="glyphicon glyphicon-time" aria-hidden="true"></span> <?php the_time('j F Y'); ?></p>
-																 			 <p> <?php the_content(); ?></p>
+															 <p class="blog-post-meta blog-post-meta-bottom"><span class="glyphicon glyphicon-time" aria-hidden="true"></span> <?php the_time('j F Y'); ?>   <?php echo "Рубрика: "; 	the_category (' '); //Пустые кавычки убирают теги <ul>  ?></p>
+																 			 <div class="entry-category"> <?php the_content(); ?></div>
 
-																 			 <span class="blog-post-meta blog-post-meta-bottom"><?php echo "Рубрика: "; 	the_category (' '); //Пустые кавычки убирают теги <ul>  ?></span>
-																 			 </div>
-																 </div>
-																 		<?php endwhile; ?>
+																<?php endwhile; ?>
 
 
 			<?php

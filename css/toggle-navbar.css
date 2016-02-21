@@ -7,7 +7,7 @@ Follow me on Twitter @maridlcrmn
     min-height: /*50*/70px;
     margin-bottom: 20px;
     border: 0px solid transparent;
-    border-bottom: 1px solid #eaeaea; /*test*/
+    border-bottom: 1px solid #eaeaea;/*test*/
     font-size: 16px;
 }/*test end*/
 .navbar-inverse {border-radius: 0; background-color: #fff/*f9f9f9*/;}/*Тест*/
@@ -19,10 +19,15 @@ and (min-width : 783px) {
     display: block;
     margin-left: 15px;
     padding: -15px -15px;
+
 }
 }
-.navbar-brand { position: relative; z-index: 2; /*test*/ float: left; min-height: 60px;padding: 5px 15px;
-  margin-top:7px; margin-bottom: 12px;}
+.navbar-brand { position: relative; z-index: 2; /*test*/ float: left; min-height: 60px;padding: 5px 15px; }
+
+@media only screen
+and (max-width : 783px) {
+.navbar-brand { position: relative; z-index: 2; /*test*/ float: left; min-height: 60px;padding: 0px 15px; }
+}
 
 .navbar-nav.navbar-right .btn { position: relative; z-index: 2; padding: 4px 20px; margin: 10px auto; }
 
