@@ -44,9 +44,30 @@
 				'after'  => '</div>',
 			) );
 		?>
+
+
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php starship_entry_footer(); ?>
+ <table class="table">
+	 <tr><td>
+		<?php /*starship_entry_footer();*/
+		function the_share ($share) {
+
+	 $share = '<script type="text/javascript" src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="//yastatic.net/share2/share.js" charset="utf-8"></script>
+<div class="ya-share2" data-services="vkontakte,facebook,odnoklassniki,moimir,gplus,twitter"></div>';
+
+		echo '<strong>Поделиться:</strong>' . $share;
+		return $share;
+		}
+
+  the_share ();
+
+		?></td>
+<td><br><?php if(function_exists('the_ratings')) { the_ratings(); } ?></td>
+ <tr></table>
 	</footer><!-- .entry-footer -->
+
+
 </article><!-- #post-## -->

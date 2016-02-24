@@ -40,7 +40,7 @@ if ( post_password_required() ) {
 			<h2 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'starship' ); ?></h2>
 			<div class="nav-links">
 
-				<div class="nav-previous"><?php previous_comments_link( esc_html__( 'Older Comments', 'starship' ) ); ?></div>
+				<div class="nav-previous"><?php previous_comments_link( esc_html__( 'Older Comments', 'starship' ) );  ?></div>
 				<div class="nav-next"><?php next_comments_link( esc_html__( 'Newer Comments', 'starship' ) ); ?></div>
 
 			</div><!-- .nav-links -->
@@ -61,7 +61,7 @@ if ( post_password_required() ) {
 			<h2 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'starship' ); ?></h2>
 			<div class="nav-links">
 
-				<div class="nav-previous"><?php previous_comments_link( esc_html__( 'Older Comments', 'starship' ) ); ?></div>
+				<div class="nav-previous"><?php previous_comments_link( esc_html__( 'Older Comments', 'starship' ) );?></div>
 				<div class="nav-next"><?php next_comments_link( esc_html__( 'Newer Comments', 'starship' ) ); ?></div>
 
 			</div><!-- .nav-links -->

@@ -30,64 +30,62 @@ get_header(); ?>
 						 }*/
 					  ?>
 
+           <?php
+        //exemple
+				/*
+				 query_posts('cat=10');
+				 while (have_posts()) : the_post();
+				 the_content();
+				 endwhile;
+				 wp_reset_query();
+				 */
+				 ?>
+
+	<?php
+	 	 query_posts ( 'cat=10&posts_per_page=4' ); /*echo 'Нужное из категории' .'«'. get_cat_name(1). '»';*/
+	 	      while(have_posts()) : the_post();
+	 ?>
+
+	  <h2 class="blog-post-title-home"><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h2>
+
+	  <p class="blog-post-meta blog-post-meta-bottom"><span class="glyphicon glyphicon-time" aria-hidden="true"></span> <?php the_time('j F Y'); ?>&nbsp;&nbsp;&nbsp;<?php echo "Рубрика: "; 	the_category (' '); //Пустые кавычки убирают теги <ul>  ?></p>
+						<div class="entry-category"><?php the_content();?> </div>
+
+  <?php endwhile; ?> <?php wp_reset_postdata(); ?>
+
+	<?php
+		 query_posts ( 'cat=11&posts_per_page=4' ); /*echo 'Нужное из категории' .'«'. get_cat_name(1). '»';*/
+		 	   while(have_posts()) : the_post();
+		 ?>
+		<h2 class="blog-post-title-home"><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h2>
+
+		<p class="blog-post-meta blog-post-meta-bottom"><span class="glyphicon glyphicon-time" aria-hidden="true"></span> <?php the_time('j F Y'); ?>&nbsp;&nbsp;&nbsp;<?php echo "Рубрика: "; 	the_category (' '); //Пустые кавычки убирают теги <ul>  ?></p>
+		<div class="entry-category"> <?php the_content(); ?></div>
+
+		<?php endwhile; ?> <?php wp_reset_postdata(); ?>
+
+		<?php
+			 query_posts ( 'cat=12&posts_per_page=4' ); /*echo 'Нужное из категории' .'«'. get_cat_name(1). '»';*/
+						while(have_posts()) : the_post();
+		?>
+		  <h2 class="blog-post-title-home"><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h2>
+
+		  <p class="blog-post-meta blog-post-meta-bottom"><span class="glyphicon glyphicon-time" aria-hidden="true"></span> <?php the_time('j F Y'); ?>   <?php echo "Рубрика: "; 	the_category (' '); //Пустые кавычки убирают теги <ul>  ?></p>
+		  <div class="entry-category"> <?php the_content(); ?></div>
+
+			<?php endwhile; ?> <?php wp_reset_postdata(); ?>
+
 
 			<?php
-	 	 $catquery = new WP_Query( 'cat=10&posts_per_page=4' );
-     /*echo 'Нужное из категории' .'«'. get_cat_name(1). '»';*/
-	 	 while($catquery->have_posts()) : $catquery->the_post();
-	 					 ?>
+				 query_posts ( 'cat=9&posts_per_page=4' ); /*echo 'Нужное из категории' .'«'. get_cat_name(1). '»';*/
+							while(have_posts()) : the_post();
+			?>
+				<h2 class="blog-post-title-home"><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h2>
 
+				<p class="blog-post-meta blog-post-meta-bottom"><span class="glyphicon glyphicon-time" aria-hidden="true"></span> <?php the_time('j F Y'); ?>&nbsp;&nbsp;&nbsp;<?php echo "Рубрика: "; 	the_category (' '); //Пустые кавычки убирают теги <ul>  ?></p>
+				<div class="entry-category"> <?php the_content(); ?></div>
 
-	            <h2 class="blog-post-title-home"><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h2>
-
-	<p class="blog-post-meta blog-post-meta-bottom"><span class="glyphicon glyphicon-time" aria-hidden="true"></span> <?php the_time('j F Y'); ?>&nbsp;&nbsp;&nbsp;<?php echo "Рубрика: "; 	the_category (' '); //Пустые кавычки убирают теги <ul>  ?></p>
-						<div class="entry-category"><?php the_content(); ?></div>
-
-						<?php endwhile; ?>
-
-
-					 <?php
-		 	 	 $catquery2 = new WP_Query( 'cat=11&posts_per_page=4' );
-		      /*echo 'Нужное из категории' .'«'. get_cat_name(1). '»';*/
-		 	 	 while($catquery2->have_posts()) : $catquery2->the_post();
-		 	 					 ?>
-
-		 	            <h2 class="blog-post-title-home"><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h2>
-
-		     	<p class="blog-post-meta blog-post-meta-bottom"><span class="glyphicon glyphicon-time" aria-hidden="true"></span> <?php the_time('j F Y'); ?>&nbsp;&nbsp;&nbsp;<?php echo "Рубрика: "; 	the_category (' '); //Пустые кавычки убирают теги <ul>  ?></p>
-		 							<div class="entry-category"> <?php the_content(); ?></div>
-
-		 					 <?php endwhile; ?>
-
-
-							 <?php
-							 $catquery3 = new WP_Query( 'cat=9&posts_per_page=4' );
-							 /*echo 'Нужное из категории' .'«'. get_cat_name(1). '»';*/
-							 while($catquery3->have_posts()) : $catquery3->the_post();
-							 			?>
-
-							 			 <h2 class="blog-post-title-home"><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h2>
-
-									 <p class="blog-post-meta blog-post-meta-bottom"><span class="glyphicon glyphicon-time" aria-hidden="true"></span> <?php the_time('j F Y'); ?>&nbsp;&nbsp;&nbsp;<?php echo "Рубрика: "; 	the_category (' '); //Пустые кавычки убирают теги <ul>  ?></p>
-							 			 	<div class="entry-category"> <?php the_content(); ?></div>
-
-							 		<?php endwhile; ?>
-
-
-
-																 <?php
-																 $catquery4 = new WP_Query( 'cat=12&posts_per_page=4' );
-																 /*echo 'Нужное из категории' .'«'. get_cat_name(1). '»';*/
-																 while($catquery4->have_posts()) : $catquery4->the_post();
-																 			?>
-
-												 			 <h2 class="blog-post-title-home"><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h2>
-
-															 <p class="blog-post-meta blog-post-meta-bottom"><span class="glyphicon glyphicon-time" aria-hidden="true"></span> <?php the_time('j F Y'); ?>   <?php echo "Рубрика: "; 	the_category (' '); //Пустые кавычки убирают теги <ul>  ?></p>
-																 			 <div class="entry-category"> <?php the_content(); ?></div>
-
-																<?php endwhile; ?>
-
+				<?php endwhile; ?> <?php wp_reset_postdata(); ?>
 
 			<?php
 

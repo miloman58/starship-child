@@ -17,7 +17,7 @@ get_header(); ?>
 <div class="col-sm-8 blog-main">
 
 	<div class="blog-post">
-
+       <div class="blog-page">
 			<?php
 			while ( have_posts() ) : the_post();
 
@@ -30,7 +30,7 @@ get_header(); ?>
 
 			endwhile; // End of the loop.
 			?>
-
+    </div>    <!-- /.blog-page -->
 		</div><!-- /.blog-post -->
 
 	</div><!-- /.blog-main -->

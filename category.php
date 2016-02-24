@@ -54,6 +54,8 @@ else: ?>
 <?php endif; ?>
 
 
+<?php wp_pagination(); ?>
+
 	</div><!-- /.blog-post -->
 
 </div><!-- /.blog-main -->

@@ -16,10 +16,10 @@
 </div><!-- /.container -->
 
 <footer class="blog-footer">
-	<p>Blog template built for <a href="http://getbootstrap.com">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
-	<p>
-		<a href="#">Back to top</a>
-	</p>
+
+			<a href="/contact" rel="nofollow">Обратная связь</a>|<a href="/sitemap">Карта сайта</a>|<a href="/o-proekte">О проекте</a>|<!--noindex--><a rel="nofollow" href="https://twitter.com/zachatieinforu" title="Twitter" target="_blank">Twitter</a>|<a href="#">Наверх</a><!--/noindex-->
+				<p><!--noindex-->© 2015 - <?php echo date('Y'); ?> Zachatieinfo.ru - Зачатие ребенка от А до Я. <br>Перед использованием информации проконсультируйтесь с врачом!<!--/noindex-->
+
 </footer>
 
 
@@ -28,6 +28,6 @@
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <?php wp_footer(); ?>
-
+<script type="text/javascript" src="http://zachatieinfo.ru/sbox/simplebox_util.js"></script>
 </body>
 </html>
