@@ -18,7 +18,7 @@ get_header(); ?>
 		if ( have_posts() ) : ?>
 
 
-				<h2 class="blog-post-title"><?php printf( esc_html__( 'Результаты поиска: %s', 'starship' ), '<span>' . get_search_query() . '</span>' ); ?></h2>
+				<div class="blog-post-title-search"><?php printf( esc_html__( 'Результаты поиска: %s', 'starship' ), '<span>' . get_search_query() . '</span>' ); ?></div>
 
 
 			<?php
@@ -34,7 +34,7 @@ get_header(); ?>
 
 			endwhile;
 
-			the_posts_navigation();
+		/*	the_posts_navigation();*/
 
 		else :
 

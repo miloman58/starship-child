@@ -11,7 +11,7 @@
 
 <section class="no-results not-found">
 	<header class="page-header">
-		<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'starship' ); ?></h1>
+		<h1 class="page-title"><?php esc_html_e( 'Ничего не найдено', 'starship' ); ?></h1>
 	</header><!-- .page-header -->
 
 	<div class="page-content">
@@ -22,7 +22,7 @@
 
 		<?php elseif ( is_search() ) : ?>
 
-			<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'starship' ); ?></p>
+			<p><?php esc_html_e( 'Извините, но ничего не соответствуют условиям поиска. Пожалуйста, попытайтесь снова с другими ключевыми словами.', 'starship' ); ?></p>
 			<?php
 				get_search_form();
 
@@ -30,7 +30,7 @@
 
 			<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'starship' ); ?></p>
 			<?php
-				get_search_form();
+	        	get_search_form();
 
 		endif; ?>
 	</div><!-- .page-content -->

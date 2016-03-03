@@ -17,8 +17,10 @@
 
 <footer class="blog-footer">
 
-			<a href="/contact" rel="nofollow">Обратная связь</a>|<a href="/sitemap">Карта сайта</a>|<a href="/o-proekte">О проекте</a>|<!--noindex--><a rel="nofollow" href="https://twitter.com/zachatieinforu" title="Twitter" target="_blank">Twitter</a>|<a href="#">Наверх</a><!--/noindex-->
-				<p><!--noindex-->© 2015 - <?php echo date('Y'); ?> Zachatieinfo.ru - Зачатие ребенка от А до Я. <br>Перед использованием информации проконсультируйтесь с врачом!<!--/noindex-->
+			<a href="/contact" rel="nofollow">Обратная связь</a>|<a href="/sitemap">Карта сайта</a>|<a href="/o-proekte">О проекте</a>|<!--noindex--><a href="#">Поиск</a>|<a rel="nofollow" href="https://twitter.com/zachatieinforu" title="Twitter" target="_blank">Twitter</a><!--/noindex-->
+				<p style = "font-size:12px"><!--noindex-->&copy; 2015 - <?php echo date('Y'); ?> Zachatieinfo.ru - Зачатие ребенка от А до Я. Перепечатка материалов без письменного разрешения запрещена.
+
+<br>Перед использованием информации проконсультируйтесь с врачом!<!--/noindex-->
 
 </footer>
 

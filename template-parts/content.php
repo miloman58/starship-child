@@ -30,9 +30,8 @@
 		<?php
 		endif; ?>
 	</header><!-- .entry-header -->
-
 	<div class="entry-content">
-		<?php
+	<?php
 			the_content( sprintf(
 				/* translators: %s: Name of current post. */
 				wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'starship' ), array( 'span' => array( 'class' => array() ) ) ),
@@ -62,7 +61,7 @@
 		return $share;
 		}
 
-  the_share ();
+  the_share ($share);
 
 		?></td>
 <td><br><?php if(function_exists('the_ratings')) { the_ratings(); } ?></td>

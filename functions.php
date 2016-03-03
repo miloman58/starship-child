@@ -135,7 +135,7 @@ function starship_scripts() {
 
   wp_enqueue_style( 'ie10-viewport-bug-workaround', get_template_directory_uri() . '/assets/css/ie10-viewport-bug-workaround.css' );
  //Bootstrap script
-	wp_enqueue_script( 'starship-bootstrap-min', get_template_directory_uri() . '/dist/js/bootstrap.min.js', array(), '20120206', false );
+	wp_enqueue_script( 'starship-bootstrap-min', get_template_directory_uri() . '/dist/js/bootstrap.min.js', array(), '20120206', true );
 
 	wp_enqueue_script( 'starship-ie10-viewport', get_template_directory_uri() . '/assets/js/ie10-viewport-bug-workaround.js', array(), '20120206', true );
 
@@ -205,28 +205,7 @@ require get_template_directory() . '/tgm/example-starship.php';
   */
  require get_template_directory() . '/inc/Modify-Read-More.php';
 
-
-//http://www.haloseeker.com/how-to-add-numeric-wordpress-pagination-without-plugin/
-//http://dimox.name/wordpress-pagination-without-a-plugin/
- function wp_pagination() {
- global $wp_query;
- $big = 12345678;
- $page_format = paginate_links( array(
-     'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
-     'format' => '?paged=%#%',
-     'current' => max( 1, get_query_var('paged') ),
-     'total' => $wp_query->max_num_pages,
-     'type'  => 'array',
-		 'prev_text' => '&laquo;', //текст ссылки "Предыдущая страница"
-		 'next_text' => '&raquo;' //текст ссылки "Следующая страница"
- ) );
- if( is_array($page_format) ) {
-             $paged = ( get_query_var('paged') == 0 ) ? 1 : get_query_var('paged');
-             echo '<nav><ul class="pagination pagination-lg">';
-             echo '<li><span aria-hidden="true">Страница '. $paged . ' из ' . $wp_query->max_num_pages .'</span></li>';
-             foreach ( $page_format as $page ) {
-                     echo "<li>$page</li>";
-             }
-            echo '</ul></nav>';
- }
- }
+ /**
+  * Постраничная навигация без плагина
+  */
+	 require get_template_directory() . '/inc/Wp-Pagination.php';
