@@ -15,11 +15,10 @@ get_header(); ?>
       <?php if (function_exists('dimox_breadcrumbs')) dimox_breadcrumbs(); ?>
       <!-- <h2 class="blog-post-title">Sample blog post</h2>
       <p class="blog-post-meta">January 1, 2014 by <a href="#">Mark</a></p>-->
-      
+
 <div class="__post">
       <?php
   		while ( have_posts() ) : the_post();
-
   			get_template_part( 'template-parts/content', get_post_format() );
   		 /*	the_post_navigation();*/
 

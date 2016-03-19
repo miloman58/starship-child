@@ -108,11 +108,14 @@ function starship_widgets_init() {
 		'name'          => esc_html__( 'Sidebar', 'starship' ),
 		'id'            => 'sidebar-1',
 		'description'   => 'sidebar-left-1',
-		'before_widget' => '<div class="panel panel-danger">',
-		'after_widget'  => '</div>',
-		'before_title'  => '<div class="panel-heading">',
+		'before_widget' => '',
+		'after_widget'  => '',
+		'before_title'  => '<div class = "sidebar-title">',
 		'after_title'   => '</div>',
-	) );
+
+
+ ));
+
 
 }
 add_action( 'widgets_init', 'starship_widgets_init' );
@@ -208,4 +211,14 @@ require get_template_directory() . '/tgm/example-starship.php';
  /**
   * Постраничная навигация без плагина
   */
-	 require get_template_directory() . '/inc/Wp-Pagination.php';
+  require get_template_directory() . '/inc/Wp-Pagination.php';
+
+	/**
+	 * Include the AJAX Contact Form
+	 */
+	 /*function Get_Contact_Form ($dir, $head){
+	 // Include the JavaScript & CSS Files
+	 $head = require get_template_directory() . '/contact-app/html-head-code.php';
+	 $dir = require get_template_directory() . '/contact-app/contact-form.php';
+	 return $head;
+ }*/
